@@ -81,28 +81,6 @@ export class AppComponent implements OnInit {
     });
   }
   
-/*
-  getEtudiantList() {
-    this._etudiantService.getEtudiantList().subscribe({
-    next: (res) => {
-    this.dataSource = new MatTableDataSource(res);
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sortingDataAccessor = (data, sortHeaderId) => {
-    switch (sortHeaderId) {
-    case 'nom': return data.nom;
-    default: return data[sortHeaderId];
-    }
-    };
-    this.dataSource.sort = this.sort;
-    this.dataSource.sort.sort({
-      id: 'nom', start: 'asc',
-      disableClear: false
-    });
-    },
-    error: console.log,
-    });
-  }*/
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
