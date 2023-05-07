@@ -1,0 +1,43 @@
+<div mat-dialog-content class="mat-dialog-content mat-dialog-container">
+
+<div mat-dialog-title>
+    <h1 style="text-align: center;">{{data ? 'Modifier un étudiant': 'Ajouter un étudiant'}}</h1>
+</div>
+<form [formGroup]="etudiantForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Nom(s)</mat-label>
+                <input matInput type="text" placeholder="Saisissez votre nom ici!" formControlName="nom" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Prénom(s)</mat-label>
+                <input matInput type="text" placeholder="Saisissez votre prénom ici!" formControlName="prenom" required>
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Matricule</mat-label>
+                <input matInput type="text" placeholder="Saisissez votre matricule ici!" formControlName="matricule" readonly required [value]="isAjout() ? generateMatricule() : ''">
+              </mat-form-field>
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Classe</mat-label>
+                <mat-select formControlName="classe" required>
+                    <mat-option *ngFor="let val of classe" [value]="val">{{val}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        </div>
+    </div>
+
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" color="warn" [mat-dialog-close]="false">Annuler</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Modifier': 'Enregistrer'}}</button>
+    </div>
+
+</form>
+</div>

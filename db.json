@@ -1,0 +1,42 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "nom": "Master 1 IA",
+      "effectif": 2
+    },
+    {
+      "id": 2,
+      "nom": "Master 2 IA",
+      "effectif": 1
+    },
+    {
+      "id": 3,
+      "nom": "L1 en Réseaux",
+      "effectif": 0
+    }
+  ],
+  "etudiants": [
+    {
+      "nom": "NADJILEM LONDOUL",
+      "prenom": "Amédée",
+      "matricule": "Et-07052023105028-@",
+      "classe": "Master 1 IA",
+      "id": 1
+    },
+    {
+      "nom": "AlMANY",
+      "prenom": "Oussouf",
+      "matricule": "Et-07052023105043-@",
+      "classe": "Master 2 IA",
+      "id": 2
+    },
+    {
+      "nom": "DENE",
+      "prenom": "Gisèle",
+      "matricule": "Et-07052023105110-@",
+      "classe": "Master 1 IA",
+      "id": 3
+    }
+  ]
+}
